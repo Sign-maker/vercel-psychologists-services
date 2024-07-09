@@ -33,11 +33,11 @@ export const PsychologistsItem = ({ item }) => {
   } = item;
 
   const { isLoggedIn, user } = useAuth();
-  const { addToFavorites, removeFromFavorites, isPsychologistsLoading } =
-    usePsychologists();
+  const { addToFavorites, removeFromFavorites } = usePsychologists();
 
   const [showReadMore, setShowReadmore] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const [isFavoriteLoading, setIsFavoriteLoading] = useState(false);
   const [actionOption, setActionOption] = useState({});
   const { pathname } = useLocation();
 
@@ -80,6 +80,7 @@ export const PsychologistsItem = ({ item }) => {
 
     if (!isFavorite) {
       try {
+        setIsFavoriteLoading(true);
         await addToFavorites({
           favoritesDbDocLink: { [favoritesDbSubPath]: item },
           psychologistsDbDocLink: { [psychologistsDbSubPath]: true },
@@ -88,9 +89,12 @@ export const PsychologistsItem = ({ item }) => {
         });
       } catch (error) {
         toast.error(`Sorry, unable add to favorites ${error.message}`);
+      } finally {
+        setIsFavoriteLoading(false);
       }
     } else {
       try {
+        setIsFavoriteLoading(true);
         await removeFromFavorites({
           psychologistsDbDocLink: psychologistsDbSubPath,
           favoritesDbDocLink: favoritesDbSubPath,
@@ -99,6 +103,8 @@ export const PsychologistsItem = ({ item }) => {
         });
       } catch (error) {
         toast.error(`Sorry, unable remove from favorites ${error.message}`);
+      } finally {
+        setIsFavoriteLoading(false);
       }
     }
   };
@@ -153,7 +159,7 @@ export const PsychologistsItem = ({ item }) => {
             </div>
 
             <FavoriteButton
-              isLoading={isPsychologistsLoading}
+              isLoading={isFavoriteLoading}
               isFavorite={isFavorite}
               onClick={handleFavoriteClick}
             />
