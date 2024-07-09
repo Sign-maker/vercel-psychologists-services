@@ -31,7 +31,7 @@ const routes = [
 ];
 
 const routerOptions = {
-  basename: "/psychologists-services/",
+  basename: "/",
 };
 
 function App() {
