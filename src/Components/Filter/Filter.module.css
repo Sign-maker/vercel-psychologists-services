@@ -1,0 +1,12 @@
+.wrapper {
+  max-width: 226px;
+  margin-bottom: 32px;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 129%;
+  color: var(--medium-additional-3);
+  margin-bottom: 8px;
+}

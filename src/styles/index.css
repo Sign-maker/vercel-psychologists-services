@@ -1,0 +1,191 @@
+/* @import-normalize; */
+@import url(./reset.css);
+@import url(../../node_modules/react-toastify/dist/ReactToastify.min.css);
+
+@font-face {
+  font-family: "Inter";
+  src: url("./fonts/Inter-Regular.woff2") format("woff2"),
+    url("./fonts/Inter-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./fonts/Inter-Medium.woff2") format("woff2"),
+    url("./fonts/Inter-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./fonts/Inter-SemiBold.woff2") format("woff2"),
+    url("./fonts/Inter-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./fonts/Inter-SemiBoldItalic.woff2") format("woff2"),
+    url("./fonts/Inter-SemiBoldItalic.woff") format("woff");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./fonts/Inter-Bold.woff2") format("woff2"),
+    url("./fonts/Inter-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* colors */
+  --dark: #191a15;
+  --dark-transparent-5: rgba(25, 26, 21, 0.05);
+  --dark-transparent-10: rgba(25, 26, 21, 0.1);
+  --dark-transparent-20: rgba(25, 26, 21, 0.2);
+  --dark-transparent-30: rgba(25, 26, 21, 0.3);
+  --dark-transparent-50: rgba(25, 26, 21, 0.5);
+  --dark-transparent-60: rgba(25, 26, 21, 0.5);
+  --medium: #54be96;
+  --medium-transparent-20: rgba(84, 190, 150, 0.2);
+  --medium-online: #38cd3e;
+  --meduim-accent: #36a379;
+  --medium-additional-1: #4535af;
+  --medium-additional-2: #fbc75e;
+  --medium-additional-3: #8a8a89;
+  --light-additional-1: #fbfbfb;
+  --light-additional-2: #f3f3f3;
+  --light-additional-1-transparent-50: rgba(251, 251, 251, 0.5);
+
+  /* fonts */
+  --font-family: "Inter", sans-serif;
+
+  /* transition params */
+  --my-transition-duration: 300ms;
+  --my-transition-timing-function: ease-in-out;
+  --my-transition-delay: 250ms;
+  --my-cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html ::-webkit-scrollbar {
+  width: 16px;
+}
+
+html ::-webkit-scrollbar-thumb {
+  background-color: #d9d9d9;
+  border-radius: 8px;
+  border: 6px solid white;
+}
+
+body {
+  background-color: var(--light-additional-2);
+  margin: 0;
+  font-family: var(--font-family);
+  color: var(--dark);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* ===================CONTAINER================*/
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1440px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  @media screen and (min-width: 768px) {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding-left: 128px;
+    padding-right: 128px;
+  }
+}
+
+/* //react-select */
+
+.react-select-container .react-select__control {
+  border-radius: 14px;
+  padding-left: 18px;
+  padding-right: 18px;
+  height: 48px;
+  background-color: var(--medium);
+  border: none;
+  outline: none;
+}
+
+.react-select-container .react-select__control--is-focused {
+  border: none;
+}
+.react-select-container .react-select__value-container {
+  padding: 0;
+  margin: 0;
+  /* display: block; */
+}
+.react-select-container .react-select__single-value {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: var(--light-additional-1);
+}
+
+.react-select-container .react-select__input-container {
+  padding: 0;
+  margin: 0;
+}
+
+.react-select-container .react-select__indicator {
+  padding: 0;
+}
+.react-select-container .react-select__indicator-separator {
+  display: none;
+}
+
+.react-select-container
+  .react-select__indicator.react-select__dropdown-indicator
+  svg {
+  fill: var(--light-additional-1);
+}
+
+.react-select-container
+  .react-select__control.react-select__control--menu-is-open
+  .react-select__indicator.react-select__dropdown-indicator
+  svg {
+  transform: rotate(180deg);
+}
+
+.react-select__menu .react-select__menu-list {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.react-select__menu .react-select__option {
+  margin: 0;
+  padding-left: 18px;
+}

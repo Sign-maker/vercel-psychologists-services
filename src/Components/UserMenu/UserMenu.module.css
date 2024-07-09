@@ -1,0 +1,20 @@
+.wrapper {
+  display: flex;
+  gap: 28px;
+  justify-content: space-between;
+  align-items: center;
+}
+.userInfoWrapper {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.userIconWrapper {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: var(--medium);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

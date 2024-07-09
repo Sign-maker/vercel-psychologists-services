@@ -1,0 +1,10 @@
+.backdrop {
+  position: fixed;
+  inset: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dark-transparent-60);
+  /* z-index: 1200; */
+  overflow: auto;
+}

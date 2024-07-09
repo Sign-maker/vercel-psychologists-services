@@ -1,0 +1,13 @@
+.icon-dark {
+  fill: var(--dark);
+}
+.icon-light {
+  fill: var(--light-additional-1);
+}
+.icon-accent {
+  fill: var(--medium);
+}
+
+.icon-star {
+  fill: var(--medium-additional-2);
+}

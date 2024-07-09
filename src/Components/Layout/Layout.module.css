@@ -1,0 +1,14 @@
+.header {
+  border-bottom: 1px solid var(--dark-transparent-10);
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logoAndNavigationWrapper {
+  flex-wrap: wrap;
+  display: flex;
+  column-gap: 130px;
+  align-items: baseline;
+}

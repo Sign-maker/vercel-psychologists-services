@@ -1,0 +1,122 @@
+.heroSection {
+  padding-top: 78px;
+  padding-bottom: 78px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.info {
+  max-width: 595px;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 80px;
+  line-height: 102%;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+}
+
+.titleAccent {
+  font-style: italic;
+  color: var(--medium);
+}
+
+.text {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 133%;
+  letter-spacing: -0.02em;
+  margin-bottom: 40px;
+  max-width: 510px;
+}
+
+.btnText {
+  font-size: 20px;
+}
+
+.imgWrapper {
+  /* min-height: 526px;
+  max-width: 464px;
+  width: 100%; */
+
+  position: relative;
+}
+.heroImg {
+  width: 100%;
+  max-width: 464px;
+  border-radius: 10px;
+}
+
+.countWrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  /* max-width: 312px; */
+  padding: 32px;
+  background-color: var(--medium);
+  border-radius: 20px;
+  position: absolute;
+  left: -100px;
+  bottom: 75px;
+}
+
+.iconWrapper {
+  width: 54px;
+  height: 54px;
+  padding: 12px;
+  background-color: var(--light-additional-1);
+  border-radius: 13px;
+}
+
+.countInfoText {
+  font-size: 14px;
+  color: var(--light-additional-1-transparent-50);
+  margin-bottom: 8px;
+}
+
+.countInfoValue {
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--light-additional-1);
+}
+
+.question {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+  background-color: var(--medium-additional-1);
+  transform: rotate(-15deg);
+  transform-origin: top right;
+  position: absolute;
+  left: -40px;
+  top: 185px;
+}
+
+.questionSpan {
+  transform: rotate(15deg);
+}
+
+.users {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+  background-color: var(--medium-additional-2);
+  transform: rotate(15deg);
+  transform-origin: top left;
+  position: absolute;
+  right: -40px;
+  top: 38px;
+}

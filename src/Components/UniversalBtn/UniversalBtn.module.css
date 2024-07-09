@@ -1,0 +1,43 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  font-weight: 500;
+  line-height: 125%;
+  letter-spacing: -0.01em;
+  border-radius: 30px;
+  transition: background-color var(--my-transition-duration)
+    var(--my-transition-timing-function);
+}
+
+.btnFilled {
+  color: var(--light-additional-1);
+  border: 1px solid transparent;
+  background-color: var(--medium);
+}
+
+.btnFilled:is(:hover, :focus) {
+  background-color: var(--meduim-accent);
+}
+
+.btnFilled:disabled {
+  background-color: var(--dark-transparent-30);
+}
+
+.btnTransparent {
+  color: var(--dark);
+  border: 1px solid var(--dark-transparent-20);
+  background-color: transparent;
+}
+
+.btnTransparent:is(:hover, :focus) {
+  background-color: var(--medium-transparent-20);
+}
+.btnTransparent:disabled {
+  background-color: var(--dark-transparent-20);
+}
+
+.btn:disabled {
+  pointer-events: none;
+}

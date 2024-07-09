@@ -1,0 +1,42 @@
+.item:not(:last-child) {
+  margin-bottom: 24px;
+}
+.nameWrapper {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.firstLetter {
+  width: 44px;
+  height: 44px;
+  background-color: var(--medium-transparent-20);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  color: var(--medium);
+}
+.reviewerName {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  margin-bottom: 4px;
+}
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 129%;
+}
+
+.comment {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  color: var(--dark-transparent-50);
+}
